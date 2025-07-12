@@ -1,11 +1,16 @@
 {
-  "label": "Build and Run",
-  "type": "shell",
   "version": "2.0.0",
-  "command": "g++ -std=c++17 ${file} -o temp.out && ./temp.out < input.in > output.out",
-  "problemMatcher": [],
-  "group": {
-    "kind": "build",
-    "isDefault": true
-  }
+  "tasks": [
+    {
+      "label": "Build and Run Current C++ File (No .out file)",
+      "type": "shell",
+      "command": "g++ -std=c++17 \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\" < \"${workspaceFolder}/input.in\" > \"${workspaceFolder}/output.out\" && rm \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Compiles the currently active C++ file, runs it with input.in and output.out from the workspace root, and then deletes the generated executable."
+    }
+  ]
 }
