@@ -1,0 +1,14 @@
+BasedOnStyle: Google
+BraceWrapping:
+  AfterFunction: false
+  AfterClass: false
+  AfterStruct: false
+  AfterControlStatement: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+TabWidth: 4
+UseTab: Never
+IndentWidth: 4
+AllowShortFunctionsOnASingleLine: None
+

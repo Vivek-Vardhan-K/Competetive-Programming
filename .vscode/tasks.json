@@ -1,0 +1,11 @@
+{
+  "label": "Build and Run",
+  "type": "shell",
+  "version": "2.0.0",
+  "command": "g++ -std=c++17 ${file} -o temp.out && ./temp.out < input.in > output.out",
+  "problemMatcher": [],
+  "group": {
+    "kind": "build",
+    "isDefault": true
+  }
+}
